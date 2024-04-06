@@ -19,14 +19,44 @@ body {
   justify-content: space-between;
 }
 .post {
-  width: calc(25% - 10px); /* Para hacer que cada post ocupe el 25% del ancho del contenedor y tener un espacio entre ellos */
-  margin-bottom: 20px; /* Espacio entre los posts */
-  background-color: #fafafa; /* Cambia el color de fondo */
+  position: relative;
+  width: calc(25% - 10px);
+  margin-bottom: 20px;
+  background-color: #fafafa;
   padding: 10px;
   box-sizing: border-box;
-  border-radius: 8px; /* Agrega bordes redondeados */
-  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Agrega sombra */
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
+
+.post-content {
+  flex-grow: 1;
+}
+
+.description {
+  max-height: 100px; /* Altura máxima para la descripción */
+  overflow: hidden; /* Oculta el contenido que excede la altura máxima */
+}
+
+.leer-mas-container {
+  display: flex;
+  justify-content: flex-end; /* Alinea el contenido al final del contenedor */
+}
+
+.leer-mas-button {
+  padding: 10px;
+  background-color: #00004B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  flex-grow: 1; /* Hace que el botón ocupe todo el espacio disponible */
+  margin-left: 10px; /* Agrega un espacio entre el botón y el contenido */
+}
+
 .post a {
   text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
@@ -60,10 +90,12 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .pagination li {
-  display: inline;
-  margin-right: 10px;
+  display: inline-block; /* Cambiado a inline-block para que los elementos se puedan alinear horizontalmente */
+  margin-right: 5px; /* Reducido el margen entre los elementos */
 }
+
 .pagination li a {
   text-decoration: none;
   color: #333;
@@ -72,6 +104,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px; /* Agrega bordes redondeados */
 }
+
 .pagination li a:hover {
   background-color: #ddd;
 }
@@ -89,7 +122,7 @@ body {
   font-size: 16px;
 }
 .search-container button[type=submit] {
-  background-color: #4CAF50;
+  background-color: #00004B;
   color: white;
   padding: 10px 20px;
   margin: 8px 0;
@@ -107,4 +140,10 @@ body {
   .post {
       width: calc(50% - 10px); /* Cambia el ancho de 25% a 50% */
   }
+    .pagination li {
+      display: block; /* Cambiado a bloque para que los elementos se apilen verticalmente */
+      margin-bottom: 5px; /* Agregado margen inferior entre los elementos */
+    }
+
+
 }

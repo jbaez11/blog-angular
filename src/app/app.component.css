@@ -1,0 +1,29 @@
+header {
+  background-color: #F6FBFF;
+  color: #00004B;
+  padding: 20px;
+  text-align: center;
+}
+.logo {
+  max-width: 200px; /* Establece el tamaño máximo del logo */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centra el logo horizontalmente */
+}
+nav {
+  background-color: #00004B;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer {
+  background-color: #00004B;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
