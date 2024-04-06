@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EntryComponent } from '../entry/entry.component';
 import { HomeComponent } from '../home/home.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,7 +13,8 @@ import { HomeComponent } from '../home/home.component';
     EntryComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class PagesModule { }
