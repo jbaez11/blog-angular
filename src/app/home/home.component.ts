@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  postsPerPage: number = 8; // Número de publicaciones por página
+  postsPerPage: number = 24; // Número de publicaciones por página
   currentPage: number = 1; // Página actual
   totalPages: number[] = []; // Arreglo de números de página
   pagedPosts: any[] = []; // Publicaciones mostradas en la página actual
