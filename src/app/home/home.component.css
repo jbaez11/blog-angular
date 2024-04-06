@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Cambia el color de fondo */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* Cambia el color de fondo */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post {
+  width: calc(50% - 20px); /* Cambia el ancho de 25% a 50% */
+  margin-bottom: 30px;
+  background-color: #fafafa; /* Cambia el color de fondo */
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 8px; /* Agrega bordes redondeados */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Agrega sombra */
+}
+.post img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px; /* Agrega bordes redondeados a las imágenes */
+}
+.post h2 {
+  color: #333;
+}
+.post p {
+  color: #666;
+}
+.advertisement {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fafafa; /* Cambia el color de fondo */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Agrega sombra */
+  border-radius: 8px; /* Agrega bordes redondeados */
+}
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pagination li {
+  display: inline;
+  margin-right: 10px;
+}
+.pagination li a {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Agrega bordes redondeados */
+}
+.pagination li a:hover {
+  background-color: #ddd;
+}
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.search-container input[type=text] {
+  width: 50%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.search-container button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.search-container input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .post {
+      width: calc(50% - 10px); /* Cambia el ancho de 25% a 50% */
+  }
+}
