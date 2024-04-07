@@ -9,40 +9,20 @@
 
 
     <div class="container">
-        <div class="post">
-            <h2>El Impacto Transformador de la Inteligencia Artificial en el Mundo Moderno</h2>
-            <img src="assets/img/img.webp" alt="Imagen del nuevo post">
-            <h2>Introducción:</h2>
-            <p>En el mundo actual, la inteligencia artificial (IA) ha emergido como una fuerza disruptiva que está transformando profundamente todos los aspectos de nuestras vidas. Desde la atención médica hasta el transporte, desde la educación hasta el entretenimiento, la IA está presente en todas partes, impulsando innovaciones y abriendo nuevas posibilidades que antes parecían ciencia ficción.</p>
-            <div class="advertisement">
-                <!-- Código del anuncio de Google -->
-                <p>Anuncio de Google</p>
-            </div>
-            <h2>Desarrollo:</h2>
-            <ol>
-                <li>
-                    <h3>Aplicaciones en la Medicina:</h3>
-                    <p>La IA ha revolucionado la atención médica, permitiendo diagnósticos más precisos y tratamientos más efectivos. Desde sistemas de diagnóstico por imagen hasta algoritmos de análisis genético, la IA está ayudando a los médicos a tomar decisiones más informadas y mejorar los resultados para los pacientes.</p>
-                </li>
-                <li>
-                    <h3>Transporte Autónomo:</h3>
-                    <p>Los vehículos autónomos, impulsados por algoritmos de IA avanzados, están en camino de transformar la industria del transporte. Desde automóviles hasta drones de entrega, la IA está haciendo posible un futuro donde la movilidad sea más segura, eficiente y sostenible.</p>
-                </li>
-                <li>
-                    <h3>Educación Personalizada:</h3>
-                    <p>Con el poder del aprendizaje automático, la IA está personalizando la educación para cada estudiante. Los sistemas de tutoría inteligente pueden adaptarse al ritmo y estilo de aprendizaje de cada individuo, proporcionando una experiencia educativa más efectiva y gratificante.</p>
-                </li>
-                <li>
-                    <h3>Entretenimiento y Creatividad:</h3>
-                    <p>Desde la composición musical hasta la creación de arte visual, la IA está explorando nuevas fronteras en el mundo del entretenimiento y la creatividad. Los algoritmos de generación de contenido están produciendo música, arte y literatura que desafían nuestras percepciones de lo que es posible.</p>
-                </li>
-            </ol>
+      <div class="post">
+        <!-- Título del post extraído de la variable post -->
+        <h2>{{post.title}}</h2>
 
-            <h2>Conclusión:</h2>
-            <p>La inteligencia artificial está transformando nuestro mundo de formas asombrosas y emocionantes. A medida que continuamos explorando las posibilidades de esta tecnología, es crucial abordar los desafíos éticos y sociales que surgen. Con un enfoque responsable y colaborativo, podemos aprovechar el poder de la IA para construir un futuro más próspero y equitativo para todos.</p>
+        <!-- Imagen del post -->
+        <img src="{{post.photo}}" alt="{{post.title}}">
 
+        <!-- Descripción corta del post -->
+        <p>{{post.shortDescription}}</p>
 
-        </div>
+        <!-- Contenido del post renderizado como HTML -->
+        <div [innerHTML]="post.content"></div>
+
+    </div>
     </div>
 
 

@@ -6,7 +6,7 @@ import { EntryComponent } from './entry/entry.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'entry/:id', component: EntryComponent}
+  { path: 'entry/:urlPost/:postId/:createdAt', component: EntryComponent}
   // Otras rutas si las tienes
 ];
 
