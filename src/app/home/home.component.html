@@ -25,10 +25,10 @@
             <h2>{{ post.title }}</h2>
             <p>{{ post.shortDescription }}</p>
           </div>
-          <div class="leer-mas-container">
-            <button class="leer-mas-button">Leer más</button>
-          </div>
         </a>
+        <div class="leer-mas-container">
+          <button [routerLink]="['/entry/', post.url,post.postId,post.createdAt]" class="leer-mas-button">Leer más</button>
+        </div>
       </div>
     </div>
   </div>
