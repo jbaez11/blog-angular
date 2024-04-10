@@ -31,7 +31,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .post-content {
   flex: 1;
   display: flex;
@@ -111,18 +110,15 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
 .pagination ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .pagination li {
   display: inline-block; /* Cambiado a inline-block para que los elementos se puedan alinear horizontalmente */
   margin-right: 5px; /* Reducido el margen entre los elementos */
 }
-
 .pagination li a {
   text-decoration: none;
   color: #333;
@@ -161,18 +157,14 @@ body {
 .search-container input[type=submit]:hover {
   background-color: #45a049;
 }
-
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
   .post {
     width: calc(50% - 10px); /* Cambia el ancho de 25% a 50% */
     height: auto; /* Altura automática para dispositivos móviles */
   }
-
   .pagination li {
       display: block; /* Cambiado a bloque para que los elementos se apilen verticalmente */
       margin-bottom: 5px; /* Agregado margen inferior entre los elementos */
   }
-
-
 }

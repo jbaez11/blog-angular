@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
