@@ -24,8 +24,6 @@ export class EntryComponent implements OnInit {
     this.postId = this.route.snapshot.paramMap.get('postId');
     this.createdAt = this.route.snapshot.paramMap.get('createdAt');
 
-    console.log('Post ID:', this.postId, 'Created At:', this.createdAt);
-
     if (this.postId && this.createdAt) {
       this.getPostById(this.postId, this.createdAt);
     }
@@ -34,9 +32,8 @@ export class EntryComponent implements OnInit {
 
   getPostById(postId: string, createdAt: string) {
     // Asegúrate de que la URL y los parámetros sean correctos para tu API
-    const url = `ec2-54-198-221-232.compute-1.amazonaws.com:3000/api/posts/${postId}?createdAt=${encodeURIComponent(createdAt)}`;
+    const url = `https://api.habladiversa.com/api/posts/${postId}?createdAt=${encodeURIComponent(createdAt)}`;
     this.http.get(url).subscribe(data => {
-      console.log('Post obtenido:', data);
       this.post = data;
     }, error => {
       console.error('Error al obtener el post:', error);

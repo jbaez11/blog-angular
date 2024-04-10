@@ -31,8 +31,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadPosts() {
-    this.http.get<any[]>('ec2-54-198-221-232.compute-1.amazonaws.com:3000/api/posts/').subscribe(data => {
-      console.log('Publicaciones cargadas:', data);
+    this.http.get<any[]>('https://api.habladiversa.com/api/posts/').subscribe(data => {
       this.posts = data;
       this.calculateTotalPages();
       this.goToPage(this.currentPage);
@@ -56,8 +55,6 @@ export class HomeComponent implements OnInit {
     const endIndex = Math.min(startIndex + this.postsPerPage, this.posts.length);
     this.pagedPosts = this.posts.slice(startIndex, endIndex);
     this.filteredPosts = this.pagedPosts;
-    console.log('Página actual:', this.currentPage);
-    console.log('Publicaciones mostradas:', this.pagedPosts);
   }
 
 
@@ -75,12 +72,12 @@ export class HomeComponent implements OnInit {
   onSearchInput() {
     if (this.searchTerm.trim() === '') {
       // El campo de búsqueda está vacío
-      console.log('El campo de búsqueda está vacío');
+      //console.log('El campo de búsqueda está vacío');
       // Realiza alguna acción si deseas cuando el campo de búsqueda está vacío
       this.goToPage(this.currentPage)
     } else {
       // El campo de búsqueda contiene un término
-      console.log('Buscar:', this.searchTerm);
+      //console.log('Buscar:', this.searchTerm);
       // Realiza la búsqueda utilizando this.searchTerm
       this.filteredPosts = this.posts.filter(post =>
         post.title.toLowerCase().includes(this.searchTerm.toLowerCase())
